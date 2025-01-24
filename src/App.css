@@ -1,42 +1,46 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#ff7eb3, #ff758c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.score,
+.prizes {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
 }
 
-.card {
-  padding: 2em;
+.cookie {
+  width: 350px;
+  height: 350px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
-.read-the-docs {
-  color: #888;
+.cookie.clicked {
+  transform: scale(1.2) !important;
+}
+
+.cookie:hover {
+  transform: scale(1.1);
 }

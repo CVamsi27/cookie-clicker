@@ -1,8 +1,27 @@
-# React + Vite
+## **Getting Started**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### **Clone the Repository**
 
-Currently, two official plugins are available:
+```sh
+git clone https://github.com/CVamsi27/cookie-clicker
+cd cookie-clicker
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### **Create .env file with values**
+MONGO_URI = Your Mongo DB URL
+VITE_API_URL = Backend URL
+
+### **Start backend**
+
+```sh
+cd backend
+npm install
+npm run dev
+```
+
+### **Start frontend**
+
+```sh
+npm install
+npm run dev
+```
