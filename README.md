@@ -9,8 +9,8 @@ cd cookie-clicker
 
 ### **Create .env file with values**
 
-MONGO_URI = Your Mongo DB URL
-VITE_API_URL = Backend URL
+- MONGO_URI = Your Mongo DB URL
+- VITE_API_URL = Backend URL
 
 ### **Start backend**
 
@@ -26,3 +26,6 @@ npm run dev
 npm install
 npm run dev
 ```
+
+### **Sample**
+[Game Play](/src/assets/game-play.png)
