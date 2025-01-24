@@ -27,5 +27,5 @@ npm install
 npm run dev
 ```
 
-### **Sample**
-[Game Play](/src/assets/game-play.png)
+### **Sample Game Play**
+<img src="/src/assets/game-play.png"/>
