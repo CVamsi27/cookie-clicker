@@ -7,7 +7,6 @@ const CookieButton = ({ onClick }) => {
 
   const handleClick = async () => {
     setIsClicked(true);
-    console.log("abc");
     setTimeout(() => setIsClicked(false), 200);
     await onClick();
   };

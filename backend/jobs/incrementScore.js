@@ -5,21 +5,25 @@ export const incrementScore = async (userId) => {
   let points = 1;
   let prize = 0;
 
-  if (random < 0.5) points += 10;
   if (random < 0.25) prize = 1;
+  else if (random < 0.5) points += 9;
 
-  const user = await User.findByIdAndUpdate(
-    userId,
-    {
-      $inc: { score: points, prizes: prize },
-    },
-    { new: true },
-  );
+  try {
+    const user = await User.findOneAndUpdate(
+      { userId },
+      {
+        $inc: { score: points, prizes: prize },
+      },
+      { new: true },
+    );
 
-  return {
-    score: user.score,
-    prizes: user.prizes,
-    gained: points,
-    wonPrize: prize > 0,
-  };
+    return {
+      score: user.score,
+      prizes: user.prizes,
+      gained: points,
+      wonPrize: prize > 0,
+    };
+  } catch (e) {
+    console.error(JSON.stringify(e));
+  }
 };
